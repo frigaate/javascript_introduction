@@ -31,26 +31,51 @@
 // console.log("Interest rate after 3 years = ", a);
 // console.log("Interest rate plus principal after 3 years = ", a + p);
 
-const a = parseFloat( prompt("Enter value for a") );
-const b = parseFloat( prompt("Enter value for b") );
-const c = parseFloat( prompt("Enter value for c") );
-const d = Math.pow(b, 2) - (4 * a * c)
-let x1, x2;
+// const a = parseFloat( prompt("Enter value for a") );
+// const b = parseFloat( prompt("Enter value for b") );
+// const c = parseFloat( prompt("Enter value for c") );
+// const d = Math.pow(b, 2) - (4 * a * c)
+// let x1, x2;
 
-if( d > 1){
-x1 = (-b + Math.sqrt(d)) / (2 * a);
-x2 = (-b - Math.sqrt(d)) / (2 * a);
+// if( d > 1){
+// x1 = (-b + Math.sqrt(d)) / (2 * a);
+// x2 = (-b - Math.sqrt(d)) / (2 * a);
+// }
+
+// else{
+//     console.log("Equation leads to complex roots which gives");
+//     const x11 = (-b / (2 * a));
+//     const x12 = ( Math.sqrt(Math.abs(d))) / (2 * a);
+//     // const x21 = (-b / (2 * a));
+//     // const x22 = ( Math.sqrt(Math.abs(d))) / (2 * a);
+
+//     x1 = x11 + " + i" + x12;
+//     x2 = x11 + " - i" + x12;
+// }
+
+// console.log("Solution to the quadratic equation: X1 = ", x1, ",            X2 = ", x2);
+
+// Code to calculate body mass index
+const mass = parseFloat( prompt("Enter body mass in KG") );
+const height = parseFloat( prompt("Enter height in meters") );
+const bmi = mass / Math.pow(height, 2);
+console.log("Your Body Mass Index is: ", bmi);
+let x;
+if(bmi >= 25.0){
+    x = 1;
+}
+else if(bmi < 18.5){
+    x = 2;
 }
 
-else{
-    console.log("Equation leads to complex roots which gives");
-    const x11 = (-b / (2 * a));
-    const x12 = ( Math.sqrt(Math.abs(d))) / (2 * a);
-    // const x21 = (-b / (2 * a));
-    // const x22 = ( Math.sqrt(Math.abs(d))) / (2 * a);
+switch(x){
+    case 1:
+    console.log("Your BMI shows you are overwright");
+    break;
+    case 2:
+    console.log("Your BMI shows you are underweight");
+    break;
+    default:
+        console.log("Your BMI is within the healthy range");
 
-    x1 = x11 + " + i" + x12;
-    x2 = x11 + " - i" + x12;
 }
-
-console.log("Solution to the quadratic equation: X1 = ", x1, ",            X2 = ", x2);
